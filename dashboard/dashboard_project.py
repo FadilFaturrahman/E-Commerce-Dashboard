@@ -42,7 +42,7 @@ class EcommerceDashboard:
 
 
 # Dataset
-all_df = pd.read_csv("./dashboard/all_data0.csv")
+all_df = pd.read_csv("dashboard/all_data0.csv")
 datetime_cols = ["order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date", "order_estimated_delivery_date", "order_purchase_timestamp", "shipping_limit_date"]
 
 for col in datetime_cols:
@@ -63,7 +63,7 @@ with st.sidebar:
     st.title("DICODING X Scothstore")
     
     # Logo Image
-    st.image("./dashboard/logo.png")
+    st.image("dashboard/logo.png")
 
     # Date Range
     start_date, end_date = st.date_input(
