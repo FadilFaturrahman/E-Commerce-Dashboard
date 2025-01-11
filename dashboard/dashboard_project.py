@@ -13,6 +13,7 @@ class EcommerceDashboard:
         sum_order_items_df = self.df.groupby("product_category_name_english")["product_id"].count().reset_index()
         sum_order_items_df.rename(columns={"product_id": "products"}, inplace=True)
         sum_order_items_df = sum_order_items_df.sort_values(by='products', ascending=False)
+        sum_order_items_df = sum_order_items_df.head(10)
         return sum_order_items_df
 
     def review_score_df(self):
